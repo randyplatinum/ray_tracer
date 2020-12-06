@@ -5,7 +5,7 @@ fn main() {
     println!("P3\n{} {}\n255", IMAGE_HEIGHT, IMAGE_WIDTH);
     for i in (0..IMAGE_HEIGHT).rev()
     {
-    	//println!("?");
+    	eprint!("\rScanlines remaining... {}", i);
     	for j in 0..IMAGE_WIDTH
     	{
     		let r = i as f64 / (IMAGE_WIDTH as f64 - 1f64);
@@ -19,4 +19,5 @@ fn main() {
     		println!("{} {} {}", ir, ig, ib);
     	}
     }
+    eprintln!("\n Done. ");
 }
