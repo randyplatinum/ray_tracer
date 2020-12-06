@@ -1,7 +1,10 @@
+mod vec3;
+
 const IMAGE_HEIGHT: u8=u8::MAX;
 const IMAGE_WIDTH: u8=u8::MAX;
 
 fn main() {
+	/*
     println!("P3\n{} {}\n255", IMAGE_HEIGHT, IMAGE_WIDTH);
     for i in (0..IMAGE_HEIGHT).rev()
     {
@@ -19,5 +22,8 @@ fn main() {
     		println!("{} {} {}", ir, ig, ib);
     	}
     }
+	*/
+    let test = vec3::Vec3::new(0.5, 0.5, 0.5);
+    eprintln!("x: {}, y: {}, z: {}", test.x(), test.y(), test.z());
     eprintln!("\n Done. ");
 }
